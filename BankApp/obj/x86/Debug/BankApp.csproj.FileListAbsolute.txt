@@ -1,0 +1,5 @@
+/Users/jokeller/Projects/BankApp/BankApp/bin/Debug/BankApp.exe
+/Users/jokeller/Projects/BankApp/BankApp/bin/Debug/BankApp.pdb
+/Users/jokeller/Projects/BankApp/BankApp/obj/x86/Debug/BankApp.csproj.CoreCompileInputs.cache
+/Users/jokeller/Projects/BankApp/BankApp/obj/x86/Debug/BankApp.exe
+/Users/jokeller/Projects/BankApp/BankApp/obj/x86/Debug/BankApp.pdb
