@@ -1,6 +1,14 @@
 ﻿using System;
 namespace BankApp
 {
+    public enum TypeOfAccount
+    {
+        Checking,
+        Savings,
+        Loan,
+        CD
+    }
+
     public class Account
     {
         private static int lastAccountNumber = 0;
@@ -20,7 +28,7 @@ namespace BankApp
         public decimal Balance
         { get; private set; }
 
-        public string AccountType
+        public TypeOfAccount AccountType
         { get; set; }
 
         public DateTime CreatedDate

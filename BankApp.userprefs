@@ -1,8 +1,9 @@
 ﻿<Properties StartupConfiguration="{850CE54B-7DFC-4906-A1D1-87477788AF21}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="BankApp/Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="BankApp/Account.cs">
     <Files>
-      <File FileName="BankApp/Program.cs" Line="7" Column="18" />
-      <File FileName="BankApp/Account.cs" Line="24" Column="22" />
+      <File FileName="BankApp/Program.cs" Line="8" Column="2" />
+      <File FileName="BankApp/Account.cs" Line="15" Column="27" />
+      <File FileName="BankApp/Bank.cs" Line="14" Column="45" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
