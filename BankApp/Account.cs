@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+
 namespace BankApp
 {
     public enum TypeOfAccount
@@ -34,12 +36,19 @@ namespace BankApp
         public DateTime CreatedDate
         { get; set; }
 
+        public virtual ICollection<Transaction> Transactions
+        {
+            get;
+            set;
+        }
+
 		#endregion
 
 		#region  Constructors
         public Account() 
         {
             AccountNumber = ++lastAccountNumber;
+            CreatedDate = DateTime.UtcNow;
         }
 		#endregion
 
