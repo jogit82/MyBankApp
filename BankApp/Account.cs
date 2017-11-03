@@ -62,6 +62,11 @@ namespace BankApp
 
 		public decimal Withdraw(decimal amount)
 		{
+            if(amount > Balance) 
+            {
+                throw new ArgumentOutOfRangeException("Insufficient funds.");
+            }
+
 			Balance -= amount;
             return Balance;
 		}

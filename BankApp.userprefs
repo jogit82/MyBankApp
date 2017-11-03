@@ -1,10 +1,11 @@
 ﻿<Properties StartupConfiguration="{850CE54B-7DFC-4906-A1D1-87477788AF21}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="BankApp/Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="BankApp/App.config">
     <Files>
-      <File FileName="BankApp/Account.cs" Line="35" Column="9" />
-      <File FileName="BankApp/Bank.cs" Line="62" Column="13" />
-      <File FileName="BankApp/Transaction.cs" Line="10" Column="6" />
-      <File FileName="BankApp/Program.cs" Line="47" Column="25" />
+      <File FileName="BankApp/Account.cs" Line="69" Column="13" />
+      <File FileName="BankApp/Bank.cs" Line="97" Column="1" />
+      <File FileName="BankApp/Transaction.cs" Line="11" Column="10" />
+      <File FileName="BankApp/Program.cs" Line="69" Column="44" />
+      <File FileName="BankApp/App.config" Line="6" Column="17" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />

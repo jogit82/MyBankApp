@@ -5,8 +5,8 @@ namespace BankApp
 {
     public static class Bank // static class, everything in here has to be static
     {
-		// static -> we only want one list, and not a new copy everytime we create an account
-		private static List<Account> accounts = new List<Account>();
+        // static -> we only want one list, and not a new copy everytime we create an account
+        private static List<Account> accounts = new List<Account>();
 
         /// <summary>
         ///     This is about a bank account
@@ -27,7 +27,7 @@ namespace BankApp
                 AccountType = accountType
             };
 
-            if (initialDeposit > 0) 
+            if (initialDeposit > 0)
             {
                 account.Deposit(initialDeposit);
             }
@@ -43,7 +43,7 @@ namespace BankApp
         public static void Deposit(int accountNumber, decimal amount)
         {
             var account = db.Accounts.Where(a => a.AccountNumber == accountNumber).FirstOrDefault();
-            if(account == null)
+            if (account == null)
             {
                 return;
                 // TODO: exception handling
@@ -64,32 +64,33 @@ namespace BankApp
             db.SaveChanges();
         }
 
-		public static void Withdraw(int accountNumber, decimal amount)
-		{
-			var account = db.Accounts.Where(a => a.AccountNumber == accountNumber).FirstOrDefault();
-			if (account == null)
-			{
-				return;
-				// TODO: exception handling
-			}
+        public static void Withdraw(int accountNumber, decimal amount)
+        {
+            var account = db.Accounts.Where(a => a.AccountNumber == accountNumber).FirstOrDefault();
+            if (account == null)
+            {
+                throw new ArgumentOutOfRangeException("Invalid account number.");
 
-			account.Deposit(amount);
+            }
 
-			var transaction = new Transaction
-			{
-				TransactionDate = DateTime.UtcNow,
-				TypeOfTransaction = TransactionType.Debit,
-				Description = "Branch withdraw",
-				Amount = amount,
-				AccountNumber = account.AccountNumber
-			};
+            account.Withdraw(amount);
 
-			db.Transactions.Add(transaction);
-			db.SaveChanges();
-		}
+            var transaction = new Transaction
+            {
+                TransactionDate = DateTime.UtcNow,
+                TypeOfTransaction = TransactionType.Debit,
+                Description = "Branch withdraw",
+                Amount = amount,
+                AccountNumber = account.AccountNumber
+            };
 
-		public static List<Transaction> GetAllTransactions(int accountNumber)
-		{
+            db.Transactions.Add(transaction);
+            db.SaveChanges();
+        }
+
+        public static List<Transaction> GetAllTransactions(int accountNumber)
+        {
             return db.Transactions.Where(t => t.AccountNumber == accountNumber).OrderByDescending(t => t.TransactionDate).ToList();
-		}
+        }
+    }
 }
